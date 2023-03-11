@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    /* Type Checking*/
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    /* Modules */
+    "baseUrl": "./",
+    "module": "ESNext",
+    "moduleResolution": "nodenext",
+    "paths": {
+      "frontend": ["./packages/frontend/src"],
+      "backend": ["./packages/backend/src"],
+      "shared": ["./packages/shared/src"]
+    },
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Language and Environment*/
+    "target": "ES2023",
+
+    /* Lib */
+    "lib": ["ES2020", "ESNext", "DOM"],
+
+    /* Projects */
+    "incremental": true,
+
+    /* Output formatting */
+    "noErrorTruncation": true,
+    "pretty": true,
+    "preserveWatchOutput": true
+
+    /* Watch options */
+  }
+}
