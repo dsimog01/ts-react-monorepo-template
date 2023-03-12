@@ -1,16 +1,17 @@
 {
-    "name": "backend",
+    "name": "@ts-react-monorepo-template/server",
     "type": "module",
+    "private": true,
     "version": "0.0.1",
     "license": "GPL-3.0",
     "main": "dist/index.js",
     "scripts": {
       "test": "yarn run test:unit",
       "test:unit": "mocha -r ts-node/register -r dotenv/config --exit --recursive 'tests/**/*.unit.test.ts'",
-      "start:dev": "yarn run link:frontend && nodemon -w src -e js,ts,json --require dotenv/config -x ts-node src/index.ts",
-      "start:webpack:dev": "yarn build:webpack && yarn run link:frontend && webpack --watch --mode development & nodemon -w dist -e js,json --require dotenv/config -x node dist/index.js",
-      "start:webpack": "yarn run build:webpack && yarn run link:frontend && node ./dist/index.js",
-      "link:frontend": "ln -s ../frontend/build/ ./frontendBuild",
+      "start:dev": "yarn run link:ui && nodemon -w src -e js,ts,json --require dotenv/config -x ts-node src/index.ts",
+      "start:webpack:dev": "yarn build:webpack && yarn run link:ui && webpack --watch --mode development & nodemon -w dist -e js,json --require dotenv/config -x node dist/index.js",
+      "start:webpack": "yarn run build:webpack && yarn run link:ui && node ./dist/index.js",
+      "link:ui": "ln -s ../ui/build/ ./uiBuild",
       "build": "yarn run clean:dist && yarn run clean:ln && tsc -p tsconfig.json",
       "build:webpack": "yarn run clean:webpack && yarn run clean:ln && webpack",
       "lint": "eslint src/**/*.ts",
@@ -20,7 +21,7 @@
       "clean:modules": "rimraf ./node_modules",
       "clean:dist": "rimraf ./dist",
       "clean:webpack": "rimraf ./dist",
-      "clean:ln": "rimraf ./frontendBuild"
+      "clean:ln": "rimraf ./uiBuild"
     },
     "dependencies": {
       "@ts.react-monorepo-template/shared": "^0.0.1",
