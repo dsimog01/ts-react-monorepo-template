@@ -24,7 +24,6 @@
       "clean:ln": "rimraf ./uiBuild"
     },
     "dependencies": {
-      "@ts.react-monorepo-template/shared": "^0.0.1",
       "ajv": "^8.12.0",
       "cors": "^2.8.5",
       "express": "^4.18.2",
