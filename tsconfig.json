@@ -38,7 +38,7 @@
     "forceConsistentCasingInFileNames": true,
 
     /* Language and Environment*/
-    "target": "ES2023",
+    "target": "ES2022",
 
     /* Lib */
     "lib": ["ES2020", "ESNext", "DOM"],
