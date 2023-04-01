@@ -1,0 +1,45 @@
+{
+  "name": "ts-react-monorepo-template",
+  "version": "0.0.1",
+  "description": "Describe your project",
+  "homepage": "Put your homepage here",
+  "keywords": [
+    "Put",
+    "your",
+    "keywords",
+    "here"
+  ],
+  "bugs": {
+    "url": "https://github.com/dsimog01/ts-react-monorepo-template/issues",
+    "email": "dsimog01@estudiantes.unileon.es"
+  },
+  "license": "GPL-3.0",
+  "author": "dsimog01 <dsdiegosg@gmail.com>",
+  "repository": "https://github.com/dsimog01/ts-react-monorepo-template.git",
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.4.1",
+    "rimraf": "^4.1.1"
+  },
+  "scripts": {
+    "build": "lerna run build --include-dependencies --stream",
+    "build:webpack": "lerna run build:webpack --include-dependencies --stream",
+    "start:dev": "lerna run start:dev --include-dependencies --stream",
+    "start:webpack:dev": "lerna run start:webpack:dev --include-dependencies --stream",
+    "test": "lerna run test --include-dependencies --stream",
+    "lint": "lerna run lint --include-dependencies --stream",
+    "format": "lerna run format --include-dependencies --stream",
+    "pretty": "lerna run pretty --include-dependencies --stream",
+    "clean": "yarn run clean:build && yarn run clean:libraries",
+    "clean:libraries": "rimraf packages/**/node_modules && rimraf node_modules",
+    "clean:build": "rimraf packages/**/dist && rimraf packages/**/build"
+  }
+}
