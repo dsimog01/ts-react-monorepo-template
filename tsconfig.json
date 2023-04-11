@@ -7,7 +7,6 @@
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
-    "strictBindCallApply": true,
     "useUnknownInCatchVariables": true,
 
     /* Modules */
