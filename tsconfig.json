@@ -3,7 +3,6 @@
     /* Type Checking*/
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
-    "noImplicitAny": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
