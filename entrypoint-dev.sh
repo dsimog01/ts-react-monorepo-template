@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd /app && yarn && yarn build
-cd /app/packages/common && yarn start:dev &
-cd /app/packages/ui/ && yarn start:dev &
-cd /app/packages/server && yarn start:dev &
+cd /app && npm i && npm run build
+cd /app/packages/common && npm run start:dev &
+cd /app/packages/ui/ && npm run start:dev &
+cd /app/packages/server && npm run start:dev &
 
 wait

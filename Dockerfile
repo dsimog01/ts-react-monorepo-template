@@ -20,31 +20,31 @@ RUN apk add --no-cache --virtual .build-deps \
 
 # Install dependencies
 WORKDIR /app
-COPY package.json yarn.lock lerna.json tsconfig.json ./
+COPY package.json package-lock.json lerna.json tsconfig.json ./
 COPY packages/ui/package.json \ 
   packages/ui/
 COPY packages/server/package.json \ 
   packages/server/
 COPY packages/common/package.json \ 
   packages/common/
-RUN yarn --frozen-lockfile --non-interactive --ignore-optional
+RUN npm i --frozen-lockfile --non-interactive --ignore-optional
 
 # Build common
 WORKDIR /app/packages/common/
 COPY packages/common/ .
-RUN yarn build
+RUN npm run build
 # Results in dist/*
 
 # Build admin-ui
 WORKDIR /app/packages/ui/
 COPY packages/ui/ .
-RUN yarn build
+RUN npm run build
 # Results in build/*
 
 # Build server
 WORKDIR /app/packages/server/
 COPY packages/server/ .
-RUN yarn build
+RUN npm run build
 # Results in dist/*
 
 ###############
