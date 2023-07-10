@@ -24,10 +24,10 @@
     "lint": "eslint src/**/*.tsx src/**/*.ts",
     "format": "eslint src/**/*.tsx src/**/*.ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "test": "yarn run test:unit",
+    "test": "npm run test:unit",
     "test:unit": "mocha -r ts-node/register -r dotenv/config --exit --recursive 'tests/**/*.unit.test.ts'",
-    "start:dev": "nodemon --ignore \"*.json\" -e ts,tsx --watch src/ --exec \"yarn build\"",
-    "start:webpack:dev": "nodemon --ignore \"*.json\" -e ts,tsx --watch src/ --exec \"yarn build\""
+    "start:dev": "nodemon --ignore \"*.json\" -e ts,tsx --watch src/ --exec \"npm run build\"",
+    "start:webpack:dev": "nodemon --ignore \"*.json\" -e ts,tsx --watch src/ --exec \"npm run build\""
   },
   "eslintConfig": {
     "extends": [

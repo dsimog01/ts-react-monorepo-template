@@ -20,7 +20,7 @@
     "format": "eslint src/**/*.ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\"",
     "dev": "tsc -w",
-    "test": "yarn run test:unit",
+    "test": "npm run test:unit",
     "test:unit": "mocha -r ts-node/register -r dotenv/config --exit --recursive 'tests/**/*.unit.test.ts'"
   },
   "dependencies": {
